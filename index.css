@@ -1,0 +1,42 @@
+.container {
+    display: grid; 
+    grid-template-columns: 0.6fr 1.4fr; 
+    grid-template-rows: 0.2fr 2.6fr 0.2fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header header"
+      "game/clicker store"
+      "footer footer"; 
+      height: 100vh;
+  }
+
+
+
+
+
+
+
+
+.container {
+  display: grid; 
+  grid-template-columns: 0.6fr 1.4fr; 
+  grid-template-rows: 0.2fr 2.6fr 0.2fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "header header"
+    "game store"
+    "footer footer"; 
+}
+.footer { grid-area: footer; 
+background-color: #CB36C4;
+text-align: center;
+}
+.header { grid-area: header; 
+background-color: #AA3AA4;
+}
+.store { grid-area: store; 
+  background-color: #C850C0;
+}
+.game { grid-area: game;
+  background-color: #C850C0;
+ }
