@@ -5,40 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-
     <div class="container">
-        <div class="footer">
-            <h1>Bottem</h1>
-        
-        </div>
-        <div class="header"></div>
-        <div class="store">
-            <button onclick=""></button>
-        </div>
-        <div class="game">
+        <div class="Header"><h3>Welcome to Skittles Clicker</h3></div>
+        <div class="Game">
             <br><br>
-            <h1 id="pointsTracker">0</h1>
+            <h1 id="pointsTracker">0 Skittles</h1>
             <br><br>
-            <button onclick="increasePoints()"><img src="imgs/pixilart_drawing.png">
-                skittles
+            <button onclick="increasePoints()">
+                <img src="/imgs/pixilart_drawing.png" width="300">
             </button>
-            
+            <br><br>
+            <h4 id="cps">0 skittles per second</h4>
+        </div>
+        <div class="Store">
+            <button class="purchase_buttons flex-container" onclick="purchasebuybag()">
+                <span class="bold" id="buybag">0 Bags Owned</span>
+                    <img src="/imgs/skittles_PNG23.png" width="75">
+                    <span class="bold">Cost: 10</span>
+            </button>
+            <br>
+            <button class="purchase_buttons flex-container" onclick="purchasebuybigbag()">
+                <span class="bold" id="buybigbag">0 Big Bags Owned</span>
+                    <img src="/imgs/pixilart_drawing.png" width="75">
+                    <span class="bold">Cost: 50</span>
+            </button>
+            <br>
+            <button class="purchase_buttons flex-container" onclick="purchasebuydualbag()">
+                <span class="bold" id="buydualbig">0 Dual Bags Owned</span>
+                    <img src="/imgs/pixilart_drawing.png" width="75"> 
+                    <span class="bold">Cost: 250</span>
+            </button>
+            <br>
+            <button class="purchase_buttons flex-container" onclick="purchasebuyspicybag()">
+                <span class="bold" id="buyspicybag">0 Spicy Bags Owned</span>
+                    <img src="imgs/pixilart_drawing_removebg_preview.png" width="75">
+                    <span class="bold">Cost: 500</span>
+            </button> 
+            <br>
+        </div>
+        <div class="Footer"> feeter
         </div>
       </div>
-
-<script>
-
-
-
-
-
-</script>
-<script src="game.js"></script>
-
-
+      <script src="game.js"></script>
 </body>
 </html>

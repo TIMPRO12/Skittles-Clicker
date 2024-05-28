@@ -1,42 +1,53 @@
-.container {
-    display: grid; 
-    grid-template-columns: 0.6fr 1.4fr; 
-    grid-template-rows: 0.2fr 2.6fr 0.2fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "header header"
-      "game/clicker store"
-      "footer footer"; 
+
+body {
+  font-family: "Ubuntu Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+div {
+    text-align: center;
+}
+.tracker{
+    padding-bottom: 10px;
+}
+.bold{
+    font-weight: bolder;
+}
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.purchase_buttons{
+    width: 100%;
+}
+.container {  display: grid;
+    grid-template-columns: 1.4fr 1.2fr;
+    grid-template-rows: 0.2fr 2.6fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header"
+      "Game Store"
+      "Footer Footer";
       height: 100vh;
   }
-
-
-
-
-
-
-
-
-.container {
-  display: grid; 
-  grid-template-columns: 0.6fr 1.4fr; 
-  grid-template-rows: 0.2fr 2.6fr 0.2fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "header header"
-    "game store"
-    "footer footer"; 
+  
+  .Header { grid-area: Header;
+    text-align: center; 
+    background-color: rgb(119, 31, 195);
+    font-size: xx-large;
+    
 }
-.footer { grid-area: footer; 
-background-color: #CB36C4;
-text-align: center;
+  
+  .Footer { grid-area: Footer; 
+    background-color: rgb(182, 28, 154);
 }
-.header { grid-area: header; 
-background-color: #AA3AA4;
+  
+  .Game { grid-area: Game; 
+    background-color: rgb(208, 66, 149);
 }
-.store { grid-area: store; 
-  background-color: #C850C0;
+  
+  .Store { grid-area: Store; 
+    background-color: rgb(139, 28, 224);
 }
-.game { grid-area: game;
-  background-color: #C850C0;
- }
