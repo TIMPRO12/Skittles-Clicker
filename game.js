@@ -5,11 +5,50 @@ let buybagAmmount = document.getElementById("Bag");
 let buybigbag = 0;
 let buybigbagAmmount = document.getElementById("BigBag");
 let buydualbag = 0;
-let buydualbagAmmount = document.getElementById("DualBag");
+let buydualbagAmmount = document.getElementById("DualBag"); 
 let buyspicybag = 0;
 let buyspicybagAmmount = document.getElementById("SpicyBag");
 let cps = 0;
 let cpsAmmount = document.getElementById("cps");
+
+    let bgMusic = new Howl({
+    src: ['audio/necoarc.mp3'],
+    autoplay: true,
+    volume: .15,
+    loop:   true
+    })
+
+let clickerSound = new Howl ({
+    src: ["audio/necoarcnya.mp3"]
+})
+
+let sourSound = new Howl ({
+    src: ("audio/necoarcburunyuu.mp3")
+})
+
+let bigbagSound = new Howl ({
+    src: ("audio/necoarcdoridori.mp3")
+})
+
+let dualbagSound = new Howl ({
+    src: ("audio/metalpipe.mp3")
+})
+
+let spicybagSound = new Howl ({
+    src: ("audio/lick.mp3")
+})
+
+function muteMusic() {
+    document.getElementById("mutebutton").style.display = "none"
+    document.getElementById("playbutton").style.display = "inline-block"
+    bgMusic.pause()
+}
+
+function playMusic() {
+    document.getElementById("playbutton").style.display = "none"
+    document.getElementById("mutebutton").style.display = "inline-block"
+    bgMusic.play()
+}
 
 function increasePoints() {
     points += 1 + (buybag * 0.2);
@@ -17,8 +56,9 @@ function increasePoints() {
 }
 
 function purchasebuybag() {
-    let cost = 10 + buybag * 10; 
+    let cost = 10 + buybag ** 1.3; 
     if (points >= cost) {
+
         points -= cost;
         pointsTracker.innerText = points.toFixed(2) + " Skittles";
         buybag++;
@@ -31,7 +71,7 @@ function purchasebuybag() {
 }
 
 function purchasebuybigbag() {
-    let cost = 50 + buybigbag * 25; 
+    let cost = 50 + buybigbag ** 2.3; 
     if (points >= cost) {
         points -= cost;
         pointsTracker.innerText = points.toFixed(2) + " Skittles";
@@ -45,7 +85,7 @@ function purchasebuybigbag() {
 }
 
 function purchasebuydualbag() {
-    let cost = 250 + buydualbag * 50; 
+    let cost = 250 + buydualbag * 5.3; 
     if (points >= cost) {
         points -= cost;
         pointsTracker.innerText = points.toFixed(2) + " Skittles";
@@ -59,7 +99,7 @@ function purchasebuydualbag() {
 }
 
 function purchasebuyspicybag() {
-    let cost = 500 + buyspicybag * 100; 
+    let cost = 500 + buyspicybag * 10.9; 
     if (points >= cost) {
         points -= cost;
         pointsTracker.innerText = points.toFixed(2) + " Skittles";
