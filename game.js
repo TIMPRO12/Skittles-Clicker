@@ -14,7 +14,7 @@ let cpsAmmount = document.getElementById("cps");
     let bgMusic = new Howl({
     src: ['audio/necoarc.mp3'],
     autoplay: true,
-    volume: .15,
+    volume: .25,
     loop:   true
     })
 
@@ -51,14 +51,15 @@ function playMusic() {
 }
 
 function increasePoints() {
+    clickerSound.play ()
     points += 1 + (buybag * 0.2);
     pointsTracker.innerText = points.toFixed(2) + " Skittles";
 }
 
 function purchasebuybag() {
-    let cost = 10 + buybag ** 1.3; 
+    let cost = 10 + buybag ** 1.3;
+    sourSound.play () 
     if (points >= cost) {
-
         points -= cost;
         pointsTracker.innerText = points.toFixed(2) + " Skittles";
         buybag++;
@@ -72,6 +73,7 @@ function purchasebuybag() {
 
 function purchasebuybigbag() {
     let cost = 50 + buybigbag ** 2.3; 
+    bigbagSound.play ()
     if (points >= cost) {
         points -= cost;
         pointsTracker.innerText = points.toFixed(2) + " Skittles";
@@ -86,6 +88,7 @@ function purchasebuybigbag() {
 
 function purchasebuydualbag() {
     let cost = 250 + buydualbag * 5.3; 
+    dualbagSound.play ()
     if (points >= cost) {
         points -= cost;
         pointsTracker.innerText = points.toFixed(2) + " Skittles";
@@ -100,6 +103,7 @@ function purchasebuydualbag() {
 
 function purchasebuyspicybag() {
     let cost = 500 + buyspicybag * 10.9; 
+    spicybagSound.play ()
     if (points >= cost) {
         points -= cost;
         pointsTracker.innerText = points.toFixed(2) + " Skittles";
